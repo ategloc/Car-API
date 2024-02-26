@@ -26,4 +26,4 @@ def get_db_connection():
 def get_session(engine=None):
     if engine is None:
         engine = get_db_connection()
-    return sessionmaker(bind=engine)
+    return sessionmaker(bind=engine)()
