@@ -1,0 +1,6 @@
+db_name = ''
+db_host = ''
+db_port = ''
+db_user = ''
+db_password = ''
+db_connection = f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
