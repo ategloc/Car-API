@@ -1,15 +1,19 @@
+# Simple Api for rating cars
+made for a job recruitment process
+
 ## Needed packeges: Flask, Sqlalchemy, psycopg2, requests
 `pip install Flask sqlalchemy psycopg2 requests`
 
 ## Use api from cloud:
-1. Use the endpoints on https://car-rental-api.herokuapp.com/
+1. Use the endpoints on http://my-car-api-660bfb627e8b.herokuapp.com/
 
 
 ## How to run the app:
 1. Install the needed packages
 2.   
    1. If you want to use own database (postgreSQL advised) set it up, execute sql from file "sql/car.sql", then "sql/rate.sql" and fill up connection details in 'variables/db_variables.py'
-   2. If you want to use my database, fill up connection details in 'variables/db_variables.py' with data proivided in the email. 
+   2. RECOMMENDED  
+   If you want to use my database, fill up connection details in 'variables/db_variables.py' with data proivided in the email. 
 3. Run the app by running the command `python -m flask -app main run`
 4. Use the endpoints on http://localhost:5000/
 
