@@ -71,3 +71,7 @@ def post_rate():
         return 'Rate not added'
     except Exception as e:
         return Response(str(e), status=400)
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
