@@ -1,4 +1,5 @@
-from car_logic.car_db_connection import Car, get_session
+from car_logic.car_db_mapping import Car
+from db_connection.db_connection import get_session
 import requests
 
 
@@ -16,6 +17,13 @@ def add_car(car_name, car_make):
     session.close()
     return car
 
+def get_car(car_name, car_make):
+    session = get_session()
+    car = (
+        session.query(Car).filter(Car.car_name == car_name, Car.car_make == car_make).first()
+    )
+    session.close()
+    return car
 
 def check_if_car_exists(car_name, car_make):
     cars_by_make = requests.get(
@@ -27,4 +35,4 @@ def check_if_car_exists(car_name, car_make):
     return False
 
 if __name__ == '__main__':
-    add_car('Civic', 'Honda')
+    add_car('CR-V', 'Honda')
